@@ -1,0 +1,45 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.log
+
+# Virtual environment
+venv/
+.env
+.env.*
+
+# Jupyter and IPython
+.ipynb_checkpoints/
+
+# ---- macOS ----
+.DS_Store
+
+# ---- VSCode ----
+.vscode/
+
+# ---- Node.js / React ----
+frontend/node_modules/
+frontend/.env
+frontend/build/
+frontend/dist/
+
+# ---- Logs ----
+*.log
+*.log.*
+
+# ---- Misc ----
+*.sqlite3
+*.db
+*.pem
+*.crt
+*.key
+*.json
+
+# Ignore Google credentials
+backend/*.json
+
+# ---- OS Specific ----
+Thumbs.db
