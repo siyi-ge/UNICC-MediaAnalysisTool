@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+openai
+transformers
+whisper
+python-multipart
+pydantic
+httpx
+python-dotenv
+google-cloud-speech
+google-cloud-storage
