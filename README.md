@@ -68,13 +68,31 @@ npm install
 npm start
 ```
 
-Security
-Google Cloud JSON credentials must not be committed.
-We recommend using environment variables and a .env file for any API keys.
+🔐 Environment Variables
+To run this project securely, create a `.env` file in the **backend** directory with the following content:
+
+```env
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+GOOGLE_APPLICATION_CREDENTIALS=backend/your-service-account.json
+```
+
+Then load it in your Python code using:
+
+```bash
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
+google_cred_path = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
+```
+
+🔐 Do NOT commit your .env file or service account .json to GitHub. Use .gitignore to prevent sensitive data from leaking.
 
 📄 License
 MIT License – for academic and non-commercial use. Please cite if used in research.
 
 🙌 Credits
-Developed by Team 2 - UNICC Innovation Challenge
-Contributors: Siyi Ge and collaborators.
+Developed by NYU students & UNICC Project
+
